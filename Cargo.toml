@@ -7,6 +7,10 @@ version = "0.1.0"
 name = "binary_search"
 path = "leetcode/studyplan_algorithm1/binary_search/main.rs"
 
+[[bin]]
+name = "first_bad_version"
+path = "leetcode/studyplan_algorithm1/first_bad_version/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
