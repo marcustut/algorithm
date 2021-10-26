@@ -7,6 +7,7 @@ Deno.test("test empty array", () => {
 
 Deno.test("test one element array", () => {
   assertEquals(binarySearch([5], 5), 0);
+  assertEquals(binarySearch([5], -5), -1);
 });
 
 Deno.test("test two element array", () => {

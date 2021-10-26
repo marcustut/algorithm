@@ -21,9 +21,14 @@ func TestBinarySearch(t *testing.T) {
 			expected: -1,
 		},
 		{
-			name:     "test one element array",
+			name:     "test one element array valid",
 			input:    binarySearchTestCase{arr: []int{5}, target: 5},
 			expected: 0,
+		},
+		{
+			name:     "test one element array invalid",
+			input:    binarySearchTestCase{arr: []int{5}, target: -5},
+			expected: -1,
 		},
 		{
 			name:     "test two element array",

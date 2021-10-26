@@ -4,13 +4,13 @@ fn binary_search(nums: Vec<i32>, target: i32) -> i32 {
     }
 
     let mut start = 0;
-    let mut end = nums.len() - 1;
+    let mut end = (nums.len() - 1) as i32;
 
     while start <= end {
         let mid = (start + end) / 2;
-        if target == nums[mid] {
+        if target == nums[mid as usize] {
             return mid as i32;
-        } else if target > nums[mid] {
+        } else if target > nums[mid as usize] {
             start = mid + 1;
         } else {
             end = mid - 1;
@@ -35,7 +35,8 @@ mod tests {
 
     #[test]
     fn test_one_element_array() {
-        assert_eq!(binary_search(vec![5], 5), 0)
+        assert_eq!(binary_search(vec![5], 5), 0);
+        assert_eq!(binary_search(vec![5], -5), -1);
     }
 
     #[test]
@@ -54,8 +55,7 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
     fn test_unsorted_array() {
-        binary_search(vec![5, 2], 2);
+        assert_eq!(binary_search(vec![5, 2], 2), -1)
     }
 }
