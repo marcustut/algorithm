@@ -23,6 +23,10 @@ path = "leetcode/studyplan_algorithm1/two_pointers/squares_of_a_sorted_array/mai
 name = "rotate_array"
 path = "leetcode/studyplan_algorithm1/two_pointers/rotate_array/main.rs"
 
+[[bin]]
+name = "move_zeroes"
+path = "leetcode/studyplan_algorithm1/two_pointers/move_zeroes/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
