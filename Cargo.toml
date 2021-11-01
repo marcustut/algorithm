@@ -19,6 +19,10 @@ path = "leetcode/studyplan_algorithm1/binary_search/search_insert_position/main.
 name = "squares_of_a_sorted_array"
 path = "leetcode/studyplan_algorithm1/two_pointers/squares_of_a_sorted_array/main.rs"
 
+[[bin]]
+name = "rotate_array"
+path = "leetcode/studyplan_algorithm1/two_pointers/rotate_array/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
