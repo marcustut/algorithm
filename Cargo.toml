@@ -11,6 +11,10 @@ path = "leetcode/studyplan_algorithm1/binary_search/main.rs"
 name = "first_bad_version"
 path = "leetcode/studyplan_algorithm1/first_bad_version/main.rs"
 
+[[bin]]
+name = "search_insert_position"
+path = "leetcode/studyplan_algorithm1/search_insert_position/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
