@@ -1,4 +1,10 @@
-// TODO: Update Comment
+// This solution works using a two pointer method where the
+// first pointer iterates through the array and then the
+// second pointer iterates through the array from the first pointer
+// to the end. This prevents the same element to be added twice,
+// if the sum of both pointers equals to target then we found the
+// solution.
+//
 // Time Complexity: O(n^2)
 // Space Complexity: O(1)
 fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {

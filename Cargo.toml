@@ -35,6 +35,10 @@ path = "leetcode/studyplan_algorithm1/two_pointers/two_sum_ii/main.rs"
 name = "reverse_string"
 path = "leetcode/studyplan_algorithm1/two_pointers/reverse_string/main.rs"
 
+[[bin]]
+name = "reverse_words_in_a_string_iii"
+path = "leetcode/studyplan_algorithm1/two_pointers/reverse_words_in_a_string_iii/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
