@@ -47,6 +47,10 @@ path = "leetcode/studyplan_algorithm1/two_pointers/middle_of_the_linked_list/mai
 name = "remove_nth_node_from_end_of_list"
 path = "leetcode/studyplan_algorithm1/two_pointers/remove_nth_node_from_end_of_list/main.rs"
 
+[[bin]]
+name = "fibonacci_number"
+path = "leetcode/dynamic_programming/fibonacci_number/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
