@@ -1,1 +1,6 @@
+# ignore files without extension
+*
+!/**/
+!*.*
+
 /target
