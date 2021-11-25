@@ -1,10 +1,14 @@
-// not complete (doesn't pass all test cases)
-// unable to find the least number (not optimal solution)
 #include <bits/stdc++.h>
 using namespace std;
 
-int count_digit(int number) {
-	return int(log10(number) + 1);
+bool is_even(string s)
+{
+	return stoi(s) % 2 == 0;
+}
+
+bool is_even_char(char c)
+{
+	return (c - '0') % 2 == 0;
 }
 
 int main()
@@ -26,7 +30,7 @@ int main()
 
 		int posEven = -1;
 		for (int i = 0; i < n.length(); i++)
-			if ((n[i] - '0') % 2 == 0)
+			if (is_even_char(n[i]))
 			{
 				posEven = i;
 				break;
@@ -38,28 +42,30 @@ int main()
 			continue;
 		}
 
-		int steps = 0;
+		int steps = 0, l = posEven + 1;
 		string temp = n; // "387"
-		for (int l = 2; l <= n.length(); l++)
+		for (int i = 0; i <= 2; i++)
 		{
 			steps = 0;
-			int x = l;
 			temp = n;
 
-			while(x <= n.length()) // x = 2
+			while(l <= n.length()) // x = 2
 			{
-				reverse(temp.begin(), temp.begin() + x);
-				steps++;
-				if (stoi(temp) % 2 == 0) 
+				if (is_even_char(temp[0]) && !is_even_char(temp[temp.length() - 1]))
 				{
+					reverse(temp.begin(), temp.end());
+					steps++;
+					l++;
 					cout << steps << "\n";
 					break;
 				}
-				x++; 
+				reverse(temp.begin(), temp.begin() + l);
+				steps++;
+				l++; 
 			}	
-			if (stoi(temp) % 2 == 0) break;
+			if (is_even(temp)) break;
 		}
 
-		if (stoi(temp) % 2 == 0) continue;
+		if (is_even(temp)) continue;
 	}
 }
