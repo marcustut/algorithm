@@ -3,4 +3,7 @@
 !/**/
 !*.*
 
+# include Makefile even if it does not have extension
+!Makefile 
+
 /target
