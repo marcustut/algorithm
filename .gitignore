@@ -4,6 +4,10 @@
 !*.*
 
 # include Makefile even if it does not have extension
-!Makefile 
+!Makefile
 
+# ignore debug files
+*.dSYM/
+
+# ignore build files
 /target
