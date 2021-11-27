@@ -101,6 +101,13 @@
     "utility": "cpp",
     "valarray": "cpp",
     "variant": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "*.tcc": "cpp",
+    "cuchar": "cpp",
+    "memory_resource": "cpp",
+    "source_location": "cpp",
+    "ranges": "cpp",
+    "stop_token": "cpp",
+    "syncstream": "cpp"
   }
 }

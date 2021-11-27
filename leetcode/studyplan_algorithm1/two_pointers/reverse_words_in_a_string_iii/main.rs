@@ -1,7 +1,5 @@
-// TODO: Update Comment
-//
-// Time Complexity: O(n^2)
-// Space Complexity: O(1)
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 fn reverse_words(s: String) -> String {
     let reverse_string = |s: &mut Vec<char>| {
         let mut start = 0;
