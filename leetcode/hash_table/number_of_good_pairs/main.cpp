@@ -25,7 +25,7 @@ int numIdenticalPairs(const std::vector<int> &nums)
 int numIdenticalPairsFast(const std::vector<int> &nums)
 {
     int count = 0;
-    std::unordered_map<int, int> map;
+    std::unordered_map<int, int> map; // or std::vector<int> map(101);
     for (const int num : nums)
         count += map[num]++;
     return count;
