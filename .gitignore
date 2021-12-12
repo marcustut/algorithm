@@ -10,4 +10,4 @@
 *.dSYM/
 
 # ignore build files
-/target
+target/
