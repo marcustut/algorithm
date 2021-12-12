@@ -1,0 +1,1 @@
+/Users/marcus/Projects/algorithm/aoc/target/debug/aoc: /Users/marcus/Projects/algorithm/aoc/src/days/day1.rs /Users/marcus/Projects/algorithm/aoc/src/days/mod.rs /Users/marcus/Projects/algorithm/aoc/src/main.rs /Users/marcus/Projects/algorithm/aoc/src/utils/mod.rs
