@@ -46,7 +46,7 @@ impl Day2 {
 
 #[cfg(test)]
 mod tests {
-    use crate::days::day2::Day2;
+    use super::*;
     use crate::utils::read_file_lines;
 
     #[test]
