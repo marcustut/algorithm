@@ -3,6 +3,15 @@ edition = "2018"
 name = "algorithm"
 version = "0.1.0"
 
+[workspace]
+members = [
+    "aoc"
+]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
 [[bin]]
 name = "binary_search"
 path = "leetcode/studyplan_algorithm1/binary_search/binary_search/main.rs"
@@ -50,7 +59,3 @@ path = "leetcode/studyplan_algorithm1/two_pointers/remove_nth_node_from_end_of_l
 [[bin]]
 name = "fibonacci_number"
 path = "leetcode/dynamic_programming/fibonacci_number/main.rs"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
