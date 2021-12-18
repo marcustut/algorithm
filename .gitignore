@@ -11,3 +11,6 @@
 
 # ignore build files
 target/
+
+# ignore macOS files
+.DS_Store
