@@ -14,17 +14,22 @@
 // 5. Remove the call to test_solution, uncomment the line with a call to fibonacci_fast (and the lines reading the input),
 //    and submit it to the grader.
 
-int fibonacci_naive(int n) {
-    if (n <= 1)
-        return n;
-
+// O(2^n) time
+// O(2^n) space (function stack)
+long long fibonacci_naive(int n) {
+    if (n <= 1) return n;
     return fibonacci_naive(n - 1) + fibonacci_naive(n - 2);
 }
 
-int fibonacci_fast(int n) {
-    // write your code here
-
-    return 0;
+// O(n) time
+// O(n) space
+long long fibonacci_fast(int n) {
+    long long arr[n + 1];
+    arr[0] = 0;
+    arr[1] = 1;
+    for (int i = 2; i <= n; i++)
+      arr[i] = arr[i - 1] + arr[i - 2];
+    return arr[n];
 }
 
 void test_solution() {
@@ -38,8 +43,8 @@ int main() {
     int n = 0;
     std::cin >> n;
 
-    std::cout << fibonacci_naive(n) << '\n';
-    //test_solution();
-    //std::cout << fibonacci_fast(n) << '\n';
+    // std::cout << fibonacci_naive(n) << '\n';
+    test_solution();
+    std::cout << fibonacci_fast(n) << '\n';
     return 0;
 }

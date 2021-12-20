@@ -11,6 +11,7 @@
 
 # ignore build files
 target/
+a.out
 
 # ignore macOS files
 .DS_Store
