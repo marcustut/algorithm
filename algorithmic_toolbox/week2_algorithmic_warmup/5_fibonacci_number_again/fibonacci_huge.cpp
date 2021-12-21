@@ -16,10 +16,10 @@ int fib_last_three(long long n) {
   for (int i = 0; i < n - 1; i++) {
     int tmp_prev = prev;
     prev = curr;
-    curr = (tmp_prev % 1000) + (curr % 1000);
+    curr = (tmp_prev % 1000000000) + (curr % 1000000000);
   }
 
-  return curr % 1000;
+  return curr % 1000000000;
 }
 
 // let p be the picaso period's length,
@@ -49,6 +49,7 @@ long long get_fibonacci_huge_fast(long long n, long long m) {
 
   // reduce n to smallest possible using pisano period length
   long long remainder = n % length;
+  std::cout << "n % length: " << n << " % " << length << " = " << remainder << '\n';
   std::cout << "length: " << length << ", remainder: " << remainder << ", fib_last_three(remainder): " << fib_last_three(remainder) << '\n';
 
   // calculate fib up to smaller n
@@ -72,6 +73,22 @@ long long get_fibonacci_huge_naive(long long n, long long m) {
 }
 
 int main() {
+  while(true) {
+    int n = std::rand() % 100 + 2;
+    int m = std::rand() % 1000 + 2;
+
+    std::cout << "n: " << n << " , m: " << m << '\n';
+
+    long long res1 = get_fibonacci_huge_naive(n, m);
+    long long res2 = get_fibonacci_huge_fast(n, m);
+
+    if (res1 != res2) {
+      std::cout << "[Wrong answer] expected: " << res1 << ", got: " << res2 << '\n';
+      break;
+    } 
+    else
+      std::cout << "OK\n";
+  }
   long long n, m;
   std::cin >> n >> m;
   std::cout << get_fibonacci_huge_fast(n, m) << '\n';
