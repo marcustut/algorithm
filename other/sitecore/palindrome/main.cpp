@@ -18,14 +18,17 @@ bool isPalindrome(std::string inputString, std::string trashSymbolString)
 int main()
 {
     bool tc1 = isPalindrome("a@b!!b$a", "!@$");
+    bool e1 = true;
     std::cout << "tc1: ";
-    if (tc1)
+    if (tc1 == e1)
         std::cout << "passed" << std::endl;
     else
         std::cout << "failed" << std::endl;
+
     bool tc2 = isPalindrome("?Aa#c", "#?");
+    bool e2 = false;
     std::cout << "tc2: ";
-    if (tc2)
+    if (tc2 == e2)
         std::cout << "passed" << std::endl;
     else
         std::cout << "failed" << std::endl;

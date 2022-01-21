@@ -1,0 +1,15 @@
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/bin/Debug/net6.0/minefield
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/bin/Debug/net6.0/minefield.deps.json
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/bin/Debug/net6.0/minefield.runtimeconfig.json
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/bin/Debug/net6.0/minefield.dll
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/bin/Debug/net6.0/ref/minefield.dll
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/bin/Debug/net6.0/minefield.pdb
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/obj/Debug/net6.0/minefield.csproj.AssemblyReference.cache
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/obj/Debug/net6.0/minefield.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/obj/Debug/net6.0/minefield.AssemblyInfoInputs.cache
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/obj/Debug/net6.0/minefield.AssemblyInfo.cs
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/obj/Debug/net6.0/minefield.csproj.CoreCompileInputs.cache
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/obj/Debug/net6.0/minefield.dll
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/obj/Debug/net6.0/ref/minefield.dll
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/obj/Debug/net6.0/minefield.pdb
+/Users/marcus/Projects/algorithm/other/sitecore/minefield/obj/Debug/net6.0/minefield.genruntimeconfig.cache
