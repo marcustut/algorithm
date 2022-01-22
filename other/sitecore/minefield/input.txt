@@ -1,0 +1,6 @@
+5 5
+E E B B E
+B B E B E
+E B B E B
+B E B E B
+E B E B B

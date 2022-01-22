@@ -36,6 +36,24 @@ namespace Minefield
       }
     }
 
+    public void DisplayWithAlly()
+    {
+      List<Tuple<int, int>> coords = new List<Tuple<int, int>>();
+
+      for (int i = 0; i < minefield.Length; i++)
+        for (int j = 0; j < minefield[i].Length; j++)
+          if (minefield[i][j] == Field.Safe)
+            coords.Add(new Tuple<int, int>(i, j));
+
+      Tuple<int, int>? tCoord = coords.Count > 0 ? coords[coords.Count - 1] : null;
+      Tuple<int, int>? aCoord = coords.Count > 1 ? coords[coords.Count - 2] : null;
+
+      Display();
+
+      if (tCoord != null) Console.WriteLine("Totoshka: ({0}, {1})", tCoord.Item1, tCoord.Item2);
+      if (aCoord != null) Console.WriteLine("Ally: ({0}, {1})", aCoord.Item1, aCoord.Item2);
+    }
+
     public void Solve()
     {
       for (int i = 0; i < minefield.Length; i++)
@@ -60,7 +78,7 @@ namespace Minefield
             minefield[i][j] = Field.Safe;
             found = true;
             Console.WriteLine("Step {0}:", i + 1);
-            Display();
+            DisplayWithAlly();
             Console.WriteLine();
           }
         }
