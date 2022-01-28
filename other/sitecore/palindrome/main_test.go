@@ -10,12 +10,17 @@ func TestIsPalindrome(t *testing.T) {
 		{
 			input:    "a@b!!b$a",
 			trash:    "!@$",
-			expected: true,
+			expected: false,
 		},
 		{
 			input:    "?Aa#c",
 			trash:    "#?",
 			expected: false,
+		},
+		{
+			input:    "4411!@#332!@#22!@#233114#@!4",
+			trash:    "!@#",
+			expected: true,
 		},
 	}
 
