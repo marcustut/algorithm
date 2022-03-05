@@ -44,36 +44,3 @@ int main()
     std::cout << isValidBST(&root) << std::endl;
 }
 
-// Not working
-bool isValidBST_failed(TreeNode *root)
-{
-    // save the root value
-    int rootVal = root->val;
-    TreeNode *head = root;
-    TreeNode *curr = root->left;
-
-    if ((root->left && root->left->val == rootVal) || (root->right && root->right->val == rootVal))
-        return false;
-
-    // search the left subtree
-    while (curr != nullptr)
-    {
-        if (curr->val < rootVal)
-            curr = curr->left;
-        else
-            return false;
-    }
-
-    curr = head->right;
-
-    // search the right subtree
-    while (curr != nullptr)
-    {
-        if (curr->val > rootVal)
-            curr = curr->right;
-        else
-            return false;
-    }
-
-    return true;
-}
