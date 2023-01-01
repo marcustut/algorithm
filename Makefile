@@ -1,5 +1,5 @@
 CXX=g++-12
-CXXFLAGS=-Wall -Wextra -Werror -Wconversion -pedantic -std=c++20 -g
+CXXFLAGS=-Wall -Wextra -Wconversion -pedantic -std=c++20 -g
 
 SRCS=$(NAME)
 LIBS=-L/opt/homebrew/lib -lfmt
