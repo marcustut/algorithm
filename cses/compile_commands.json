@@ -1,0 +1,16 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang++",
+      "-c",
+      "-std=c++20",
+      "-I/Library/Developer/CommandLineTools/usr/include/bits",
+      "-o",
+      "main",
+      "repetitions.cpp"
+    ],
+    "directory": "/Users/marcus/marcustut/algorithm/cses",
+    "file": "/Users/marcus/marcustut/algorithm/cses/repetitions.cpp",
+    "output": "/Users/marcus/marcustut/algorithm/cses/main"
+  }
+]
