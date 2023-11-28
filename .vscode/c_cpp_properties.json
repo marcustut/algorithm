@@ -7,12 +7,13 @@
             ],
             "defines": [],
             "macFrameworkPath": [
-                "/Library/Developer/CommandLineTools/SDKs/MacOSX11.sdk/System/Library/Frameworks"
+                "/Library/Developer/CommandLineTools/usr/include"
             ],
-            "compilerPath": "/opt/homebrew/bin/g++-11",
+            "compilerPath": "/usr/bin/clang++",
             "cStandard": "c17",
-            "cppStandard": "c++14",
-            "intelliSenseMode": "macos-gcc-arm64"
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-gcc-arm64",
+            "compileCommands": "${workspaceFolder}/cses/compile_commands.json"
         }
     ],
     "version": 4
