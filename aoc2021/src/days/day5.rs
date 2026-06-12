@@ -42,69 +42,36 @@ impl Day5 {
         }
     }
 
-    fn handle_is_straight(first: Coord, second: Coord, map: &mut HashMap<Coord, i32>) {
-        if first.x == second.x || first.y == second.y {
-            if first.x < second.x {
-                for i in first.x..second.x + 1 {
-                    Day5::insert_into_map(Coord { x: i, y: second.y }, 1, map);
-                }
-            } else if first.x > second.x {
-                for i in second.x..first.x + 1 {
-                    Day5::insert_into_map(Coord { x: i, y: second.y }, 1, map);
-                }
-            } else if first.y < second.y {
-                for j in first.y..second.y + 1 {
-                    Day5::insert_into_map(Coord { x: first.x, y: j }, 1, map);
-                }
-            } else {
-                for j in second.y..first.y + 1 {
-                    Day5::insert_into_map(Coord { x: first.x, y: j }, 1, map);
-                }
+    fn handle_is_straight(
+        Coord { x: x1, y: y1 }: Coord,
+        Coord { x: x2, y: y2 }: Coord,
+        map: &mut HashMap<Coord, i32>,
+    ) {
+        if x1 == x2 {
+            for i in min(y1, y2)..max(y1, y2) + 1 {
+                Day5::insert_into_map(Coord { x: x1, y: i }, 1, map);
+            }
+        } else if y1 == y2 {
+            for i in min(x1, x2)..max(x1, x2) + 1 {
+                Day5::insert_into_map(Coord { x: i, y: y1 }, 1, map);
             }
         }
     }
 
-    fn handle_is_45(first: Coord, second: Coord, map: &mut HashMap<Coord, i32>) {
-        if (second.x - first.x).abs() == (second.y - first.y).abs() {
-            println!("{},{} -> {},{}", first.x, first.y, second.x, second.y);
-            if (first.x == first.y) && (second.x == second.y) {
-                for i in min(first.x, second.x)..max(first.x, second.x) + 1 {
-                    println!("{},{}", i, i);
-                    Day5::insert_into_map(Coord { x: i, y: i }, 1, map);
-                }
-            } else if (first.x == second.y) && (second.x == first.y) {
-                for i in min(first.x, second.x)..max(first.x, second.x) + 1 {
-                    println!("{},{}", i, (max(first.y, second.y).abs() - i).abs());
-                    Day5::insert_into_map(
-                        Coord {
-                            x: i,
-                            y: (max(first.y, second.y).abs() - i).abs(),
-                        },
-                        1,
-                        map,
-                    );
-                }
-            } else if first.x == first.y {
-                let mut j = 0;
-                for i in min(first.x, second.x)..max(first.x, second.x) + 1 {
-                    println!("{},{}", i, (max(first.y, second.y).abs() - j).abs());
-                    Day5::insert_into_map(
-                        Coord {
-                            x: i,
-                            y: (max(first.y, second.y).abs() - j).abs(),
-                        },
-                        1,
-                        map,
-                    );
-                    j += 1;
-                }
-            } else {
-                let mut j = min(first.y, second.y).abs();
-                for i in min(first.x, second.x)..max(first.x, second.x) + 1 {
-                    println!("{},{}", i, j);
-                    Day5::insert_into_map(Coord { x: i, y: j }, 1, map);
-                    j += 1;
-                }
+    fn handle_is_45(
+        Coord { x: x1, y: y1 }: Coord,
+        Coord { x: x2, y: y2 }: Coord,
+        map: &mut HashMap<Coord, i32>,
+    ) {
+        // diagonal implies that they must have identical distance on both x and y axis.
+        // -> distance(x) = distance(y)
+        if (x2 - x1).abs() == (y2 - y1).abs() {
+            let (mut x, mut y) = (x1, y1);
+            Day5::insert_into_map(Coord { x, y }, 1, map);
+            while x != x2 && y != y2 {
+                x += if x2 - x1 > 0 { 1 } else { -1 };
+                y += if y2 - y1 > 0 { 1 } else { -1 };
+                Day5::insert_into_map(Coord { x, y }, 1, map);
             }
         }
     }

@@ -16,26 +16,27 @@ struct Solution {}
 
 impl Solution {
     pub fn remove_nth_from_end(head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {
-        let mut cursor = head.clone().unwrap();
-        let mut count: i32 = 0;
+        todo!()
+        // let mut cursor = head.clone().unwrap();
+        // let mut count: i32 = 0;
 
-        while cursor.next != None {
-            count += 1;
-            cursor = cursor.next.unwrap();
-        }
+        // while cursor.next != None {
+        //     count += 1;
+        //     cursor = cursor.next.unwrap();
+        // }
 
-        let mut n = count - n;
+        // let mut n = count - n;
 
-        let mut new_cursor = head.unwrap();
+        // let mut new_cursor = head.unwrap();
 
-        while n != 0 {
-            n -= 1;
-            new_cursor = new_cursor.next.unwrap();
-        }
+        // while n != 0 {
+        //     n -= 1;
+        //     new_cursor = new_cursor.next.unwrap();
+        // }
 
-        new_cursor.next = new_cursor.next.unwrap().next;
+        // new_cursor.next = new_cursor.next.unwrap().next;
 
-        head
+        // head
     }
 }
 
